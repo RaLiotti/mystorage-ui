@@ -1,0 +1,29 @@
+.login{
+  margin-left: auto;
+  margin-right: auto;
+  width: 20em;
+}
+
+.form-login{
+  margin-top: 1em;
+  padding: 0.1em 1em 0.5em 1em;
+  background-color: rgba(0, 191, 255, 0.3);
+  border: rgb(66, 66, 66, 0.3) solid;
+}
+
+input{
+  margin: 0.5em 0 0.5em 0;
+}
+
+.btn-center{
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5em;
+}
+
+.label{
+  margin-bottom: 0.3em;
+  border-bottom: solid rgba(66, 66, 66, 0.3);
+  text-align: center;
+}
