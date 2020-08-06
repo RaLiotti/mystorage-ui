@@ -2,11 +2,12 @@
 <div class="container">
   <div class="p-grid pesquisa-bar">
     <div class="p-col-12">
-      <input class="p-col-12" type="text" placeholder="Pesquisar" pInputText />
+      <input class="p-col-12" type="text" placeholder="Pesquisar" value="{{nome2}}" pInputText #nomeTeste (input)="alterarNome($event)"/>
+      <h1><strong>{{nome}}</strong></h1>
     </div>
 
     <div class="p-col-2">
-      <button pButton type="button" label="Pesquisar" class="ui-button-success"></button>
+      <button pButton type="button" label="Pesquisar" class="ui-button-primary" [disabled]="nome2.length == 0" (click)="adicionarTeste(nomeTeste.value)" ></button>
     </div>
   </div>
 
@@ -14,6 +15,7 @@
     <p-table [value]="produtos">
       <ng-template pTemplate="header">
           <tr>
+              <th>Id</th>
               <th>Nome</th>
               <th>Descricão</th>
               <th>Tipo</th>
@@ -23,6 +25,7 @@
       </ng-template>
       <ng-template pTemplate="body" let-produto>
           <tr>
+              <td>{{produto.id}}</td>
               <td>{{produto.nome}}</td>
               <td>{{produto.descricao}}</td>
               <td>{{produto.tipo}}</td>
