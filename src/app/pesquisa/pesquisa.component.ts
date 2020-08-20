@@ -12,7 +12,6 @@ export class PesquisaComponent {
 
   nome2 = '';
 
-  adicionarTeste(nomeTeste : any){
 
    this.nome = nomeTeste;
 
