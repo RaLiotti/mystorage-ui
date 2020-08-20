@@ -1,0 +1,28 @@
+<div class="p-grid container">
+  <h1 class="p-col-12" style="text-align: center; color: #ffffff;"><strong>Produtos</strong></h1>
+  <p-table [paginator]="true" [value]="produtos" [rows]="10" class="p-col-12 tb-produto" >
+    <ng-template pTemplate="header">
+        <tr>
+            <th></th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Fabricação</th>
+            <th>Validade</th>
+            <th>Valor</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-produto>
+        <tr>
+            <td><img src="\assets\img\vinho\{{produto.imgUrl}}" class="img-prod-min"></td>
+            <td>{{produto.nomeProduto}}</td>
+            <td>{{produto.tipo}}</td>
+            <td>{{produto.dataFabricacao}}</td>
+            <td>{{produto.dataValidade}}</td>
+            <td>R${{produto.valor}}</td>
+        </tr>
+    </ng-template>
+  </p-table>
+
+  <button pButton type="button" label="Buscar" (click)="buscarProdutos()" ></button>
+
+</div>
